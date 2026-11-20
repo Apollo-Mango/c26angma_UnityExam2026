@@ -65,6 +65,8 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 1772d79d55a18c84abb26f6e77693b0a
     name: VolumeMaster
+  - guid: 6ad86205163ed464cbb4d450f91c0b23
+    name: PitchMusic
   m_AudioMixerGroupViews:
   - guids:
     - 402dfef63caaa6f47b242a13ed80bab0

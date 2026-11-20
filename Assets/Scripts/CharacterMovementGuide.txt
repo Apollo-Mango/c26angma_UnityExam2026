@@ -1,0 +1,25 @@
+MOVEMENT
+Lägg till Capsule objekt
+
+Lägg till AnimatedPlatformerMovement på Capsule
+
+Skapa ett Empty childobjekt till Capsule och lägg till en CircleCollider2D. Is Trigger ska vara true. Flytta objektet så att Collidern är delvis utanför Capsules CapsuleCollider.
+
+Gå till Player Input-komponenten på Capsule. Ändra "Behavior" till "Invoke Unity Events". Tryck därefter utanför objektet i scenen för att tappa fokus från det. Gå sedan tillbaka till Player Input för att se Events > Player. Lägg till ett event på Move, lägg till Capsule som objekt och välj funktionen "OnMove" näst längst upp i listan.
+Scrolla sedan ner till "Jump", lägg till objektet och välj funktionen "OnJump".
+
+Scrolla sedan ner till Animated Platformer Movement (Script) komponenten och dra in Capsule i Rb, childobjektet i Ground Check Collider.
+
+
+ANIMATION
+Skapa en Idle- och Walkinganimation för Capsule.
+I Animator, skapa en bool "Walking" under Parameters. Viktigt att namnet är specifikt Walking, annars behöver koden modifieras på rad 97 och 101 till det önskade namnet.
+
+Sätt Idle som default.
+
+Högerklicka på Idle, välj Make Transition och koppla ihop Walking och Idle. Klicka på Transitionpilen och lägg till ett nytt Condition. Walking och true.
+
+Gör sedan en Transtion från Walking till idle med condition Walking = false.
+
+Dra Capsule från Hierarchy till "Animator" i Animated Platformer Movement (Script)-kompontenten och klicka i "Walking animation".
+
